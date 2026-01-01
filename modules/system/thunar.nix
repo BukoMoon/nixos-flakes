@@ -4,7 +4,7 @@
   programs.xfconf.enable = true;
   programs.thunar.enable = true;
 
-  programs.thunar.plugins = with pkgs.xfce; [
-      thunar-volman
+  programs.thunar.plugins = with pkgs; [
+    thunar-volman
   ];
 }
