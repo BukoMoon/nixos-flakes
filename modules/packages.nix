@@ -5,7 +5,6 @@
     inputs.zen-browser.packages.${pkgs.system}.default
     wget
     git
-    git-credential-manager
     pavucontrol
     pipewire
     gnome-themes-extra
@@ -14,5 +13,6 @@
     libva
     libva-utils
     playerctl
+    emacs
   ];
 }
