@@ -16,7 +16,7 @@
       };
 
       layout = {
-        background-color = "#00000000";
+        background-color = "transparent";
 
         focus-ring = {
           enable = true;
