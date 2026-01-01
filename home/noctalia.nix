@@ -68,6 +68,7 @@
       };
       wallpaper = {
         enabled = true;
+        overviewEnabled = true;
         directory = "/home/buko/.config/Wallpapers";
         enableMultiMonitorDirectories = true;
         recursiveSearch = true;
