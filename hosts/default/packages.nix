@@ -14,6 +14,7 @@ with pkgs;
   nixfmt-rfc-style
   nixpkgs-fmt
   black
+  nixd
 
   # Utilities
   jq
