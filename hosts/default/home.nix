@@ -10,6 +10,8 @@ in
   imports = [
     ../../home/niri/default.nix
     ../../home/noctalia.nix
+    ../../home/vesktop.nix
+    ../../home/zeditor.nix
     #../../home/fastfetch.nix
     #../../home/vesktop.nix
 

@@ -11,9 +11,10 @@
     "${self}/modules/system/virtualisation.nix"
     "${self}/modules/system/keyring.nix"
     "${self}/modules/system/nvidia.nix"
+    "${self}/modules/system/thunar.nix"
     inputs.home-manager.nixosModules.default
-  ];  
-  
+  ];
+
   programs.fish.enable = true;
 
   users.users.buko = {
@@ -58,7 +59,7 @@
     };
     initrd.systemd.enable = true;
     kernelPackages = pkgs.linuxPackages_zen;
-   
+
     # Silent Boot
     consoleLogLevel = 3;
     initrd.verbose = false;
@@ -75,14 +76,14 @@
 
     kernel.sysctl = {
       "vm.swappiness" = 10;
-      
+
       "net.core.default_qdisc" = "fq";
       "net.ipv4.tcp_congestion_control" ="bbz";
 
       "net.core.somaxconn" = 2048;
       "net.ipv4.tcp_max_syn_backlog" = 2048;
       "net.core.netdev_max_backlog" = 10000;
-      
+
       "net.ipv4.tcp_rmem" = "4096 87380 16777216";
       "net.ipv4.tcp_wmem" = "4096 65536 16777216";
     };
@@ -97,11 +98,11 @@
     auto-optimise-store = true;
     #download-buffer-size = 4194304000;
   };
-    
+
   networking = {
     hostName = "nixos-buko";
     networkmanager.enable = true;
-   
+
     networkmanager = {
       wifi.backend = "wpa_supplicant";
       wifi.powersave = false;
@@ -136,11 +137,11 @@
         variant = "";
       };
     };
-    
+
     power-profiles-daemon.enable = true;
     upower.enable = true;
     printing.enable = true;
-    tumbler.enable = true;    
+    tumbler.enable = true;
 
     pipewire = {
       enable = true;
@@ -149,7 +150,7 @@
       pulse.enable = true;
     };
   };
-  
+
   hardware.bluetooth = {
     enable = true;
     package = pkgs.bluez;
@@ -163,6 +164,6 @@
   nixpkgs.config.allowUnfree = true;
 
   home-manager.backupFileExtension = "old";
-  
+
   system.stateVersion = "25.11";
 }
