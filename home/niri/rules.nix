@@ -87,7 +87,7 @@
         matches = [
           { app-id = "^com\.network\.manager$"; }
         ];
-        open-floating = true; 
+        open-floating = true;
         open-focused = true;
         default-column-width = { fixed = 450; };
         default-window-height = { fixed = 600; };
