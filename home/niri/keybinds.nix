@@ -15,7 +15,7 @@ in {
     "Mod+Tab".action = toggle-overview;
     
     # Noctalia General Keybinds
-    "Super+Super_L" = {
+    "Mod+Space" = {
       hotkey-overlay.title = "Open Application Launcher";
       action.spawn = noctalia "launcher toggle";
     };
