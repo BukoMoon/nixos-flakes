@@ -14,5 +14,6 @@
     libva-utils
     playerctl
     emacs
+    bibata-cursors
   ];
 }
