@@ -71,7 +71,7 @@
           position = { x = 0; y = 0; };
         };
       };
-      
+
       cursor = {
         size = 24;
         theme = "Bibata-Modern-Classic";
@@ -94,7 +94,7 @@
         XDG_CURRENT_DESKTOP = "niri";
         DISPLAY = ":0";
       };
- 
+
       screenshot-path = "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png";
     };
   };

@@ -92,7 +92,6 @@
         default-column-width = { fixed = 450; };
         default-window-height = { fixed = 600; };
       }
- 
 
       {
         matches = [{}];
