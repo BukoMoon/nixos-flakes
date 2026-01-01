@@ -83,7 +83,12 @@
         kcolorscheme = true;
         kitty = true;
         niri = true;
+        zed = true;
       };
+
+      dock = {
+        enabled = false;
+      }
 
       general = {
         avatarImage = "/home/buko/.face";
@@ -106,4 +111,4 @@
       };
     };
   };
-} 
+}
