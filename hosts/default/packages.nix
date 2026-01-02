@@ -15,6 +15,7 @@ with pkgs;
   nixpkgs-fmt
   black
   nixd
+  nil
 
   # Utilities
   jq
