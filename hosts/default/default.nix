@@ -201,6 +201,7 @@
 
   environment.systemPackages = with pkgs; [
     bluez
+    inputs.zen-browser.packages.${pkgs.system}.default
   ];
 
   system.stateVersion = "25.11";

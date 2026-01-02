@@ -1,4 +1,4 @@
-{ inputs, pkgs, ... }:
+{ pkgs, ... }:
 
 with pkgs;
 [
@@ -12,10 +12,8 @@ with pkgs;
 
   # Applications
   pokemmo
-  inputs.zen-browser.packages.${pkgs.system}.default
   pavucontrol
   gnome-themes-extra
-  emacs
 
   # Dev
   rustup
