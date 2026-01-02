@@ -1,19 +1,39 @@
-{ lib, config, pkgs, ... }:
+{
+  lib,
+  config,
+  pkgs,
+  ...
+}:
 
 let
   apps = import ./applications.nix { inherit pkgs; };
 
-  noctalia = cmd: [ 
-    "noctalia-shell" "ipc" "call" 
-  ] ++ (pkgs.lib.splitString " " cmd);
+  noctalia =
+    cmd:
+    [
+      "noctalia-shell"
+      "ipc"
+      "call"
+    ]
+    ++ (pkgs.lib.splitString " " cmd);
 
-in {
+in
+{
   programs.niri.settings.binds = with config.lib.niri.actions; {
     "Super+Shift+Slash".action = show-hotkey-overlay;
-    
+
     "Mod+Q".action = close-window;
     "Mod+Tab".action = toggle-overview;
-    
+
+    "Mod+C".action.spawn = [
+      "kitty"
+      "-e"
+      "emacsclient"
+      "-c"
+      "-a"
+      "'emacs'"
+    ];
+
     # Noctalia General Keybinds
     "Mod+Space" = {
       hotkey-overlay.title = "Open Application Launcher";
@@ -35,9 +55,8 @@ in {
       hotkey-overlay.title = "Toggle bar";
       action.spawn = noctalia "bar toggle";
     };
-    
-    
-    # Focus 
+
+    # Focus
     "Mod+Left".action = focus-column-left;
     "Mod+Right".action = focus-column-right;
     "Mod+Up".action = focus-window-up;
@@ -114,18 +133,18 @@ in {
     "Alt+Print".action.screenshot-window = {
       write-to-disk = false;
     };
- 
+
     # Audio Controls
     "XF86AudioRaiseVolume".action.spawn = noctalia "volume increase";
-    "XF86AudioLowerVolume".action.spawn = noctalia  "volume decrease";
+    "XF86AudioLowerVolume".action.spawn = noctalia "volume decrease";
     "XF86AudioMute".action.spawn = noctalia "volume muteOutput";
     "XF86AudioMicMute".action.spawn = noctalia "volume muteInput";
-	
+
     # Brightness Controls
     "XF86MonBrightnessUp".action.spawn = noctalia "brightness increase";
     "XF86MonBrightnessDown".action.spawn = noctalia "brightness decrease";
 
     "Super+Q".action = close-window;
     "Super+R".action = spawn apps.terminal;
- };
+  };
 }
