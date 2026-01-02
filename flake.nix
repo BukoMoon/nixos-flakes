@@ -15,7 +15,11 @@
 
     stylix = {
       url = "github:danth/stylix";
-      #input.nixpkgs.follows = "nixpkgs";
+    };
+
+    nix-gaming-edge = {
+      url = "github:powerofthe69/nix-gaming-edge";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     nix-doom-emacs-unstraightened.url = "github:/marienz/nix-doom-emacs-unstraightened";
@@ -45,6 +49,7 @@
       home-manager,
       niri,
       noctalia,
+      nix-gaming-edge,
       ...
     }@inputs:
     {
@@ -54,8 +59,9 @@
         modules = [
           ./hosts/default/default.nix
           #inputs.stylix.nixosModules.stylix
-          inputs.home-manager.nixosModules.default
+          home-manager.nixosModules.default
           sysc-greet.nixosModules.default
+          nix-gaming-edge.nixosModules.default
         ];
       };
     };
