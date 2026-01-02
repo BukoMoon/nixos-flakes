@@ -440,6 +440,26 @@
         "type": "github"
       }
     },
+    "nix-gaming-edge": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1767336403,
+        "narHash": "sha256-+hrAY9HHxaC9y/+53LYz8pd5lZ7+KPMBBMi0y/wJb2I=",
+        "owner": "powerofthe69",
+        "repo": "nix-gaming-edge",
+        "rev": "2384c8939e52308b27ace6d0b5339c5ad530385b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "powerofthe69",
+        "repo": "nix-gaming-edge",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1766902085,
@@ -638,6 +658,7 @@
         "matugen": "matugen",
         "niri": "niri",
         "nix-doom-emacs-unstraightened": "nix-doom-emacs-unstraightened",
+        "nix-gaming-edge": "nix-gaming-edge",
         "nixpkgs": "nixpkgs_6",
         "noctalia": "noctalia",
         "quickshell": "quickshell",
