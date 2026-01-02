@@ -6,6 +6,7 @@ with pkgs;
   btop
 
   # Applications
+  pokemmo
 
   # Dev
   rustup
