@@ -10,11 +10,6 @@
     #  starship init fish | source
     #'';
 
-    #shellInit = ''
-    #  set -U fish_user_paths "$fish_user_paths" "~/.emacs.d/bin"
-    #  set -U fish_user-paths "$fish_user_paths" "~/.local/bin"
-    #'';
-
     shellAliases = {
       c = "clear";
       ff = "fastfetch";
