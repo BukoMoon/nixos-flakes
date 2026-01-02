@@ -1,12 +1,21 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
 
 with pkgs;
 [
+  # Niri
+  xwayland-satellite
+  wl-clipboard
+  cliphist
+
   # TUI
   btop
 
   # Applications
   pokemmo
+  inputs.zen-browser.packages.${pkgs.system}.default
+  pavucontrol
+  gnome-themes-extra
+  emacs
 
   # Dev
   rustup
@@ -19,18 +28,24 @@ with pkgs;
   nil
 
   # Utilities
+  playerctl
+  wget
+  git
   jq
   tree
   bat
   libnotify
-  wl-clipboard
-  cliphist
   rar
   unzip
   mpv
   gpu-screen-recorder
   cava
   pciutils
+  pipewire
+  ffmpeg
+  libva
+  libva-utils
+  bibata-cursors
 
   # Fish
   fishPlugins.fzf-fish
