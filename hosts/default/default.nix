@@ -22,6 +22,18 @@
     inputs.home-manager.nixosModules.default
   ];
 
+  nixpkgs = {
+    config.allowUnfree = true;
+
+    overlays = [
+      inputs.nix-gaming-edge.overlays.default
+    ];
+  };
+
+  drivers.mesa-git = {
+    enable = true;
+  };
+
   programs.fish.enable = true;
 
   users.users.buko = {
@@ -44,6 +56,9 @@
     users = {
       "buko" = import ./home.nix;
     };
+
+    backupFileExtension = "old";
+    overwriteBackup = true;
   };
 
   fonts.packages = with pkgs; [
@@ -188,11 +203,6 @@
   environment.systemPackages = with pkgs; [
     bluez
   ];
-
-  nixpkgs.config.allowUnfree = true;
-
-  home-manager.backupFileExtension = "old";
-  home-manager.overwriteBackup = true;
 
   system.stateVersion = "25.11";
 }
