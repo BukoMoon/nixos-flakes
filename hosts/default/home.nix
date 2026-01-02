@@ -1,4 +1,10 @@
-{ config, pkgs, inputs, self, ... }:
+{
+  config,
+  pkgs,
+  inputs,
+  self,
+  ...
+}:
 
 let
   allPackages = import ./packages.nix { inherit pkgs; };
@@ -12,6 +18,7 @@ in
     ../../home/noctalia.nix
     ../../home/vesktop.nix
     ../../home/zeditor.nix
+    ../../home/doom-emacs/doom-emacs.nix
     #../../home/fastfetch.nix
     #../../home/vesktop.nix
 
@@ -30,7 +37,7 @@ in
 
   programs.home-manager.enable = true;
 
-  programs.git= {
+  programs.git = {
     enable = true;
     userName = "BukoMoon";
     userEmail = "louisadams228@gmail.com";
