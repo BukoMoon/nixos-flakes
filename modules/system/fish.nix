@@ -1,11 +1,11 @@
 { pkgs, ... }:
 
 {
-  programs.fish = { 
+  programs.fish = {
     enable = true;
     #interactiveShellInit = ''
     #  set fish_greeting
-    #  
+    #
     #  fastfetch
     #  starship init fish | source
     #'';
@@ -16,7 +16,7 @@
       shutdown = "systemctl poweroff";
       mkdir = "mkdir -p";
       ncg = "nix-collect-garbage --delete-old && sudo nix-collect-garbage -d && sudo /run/current-system/bin/switch-to-configuration boot";
-      
+
       gs = "git status";
       ga = "git add";
       gc = "git commit -m";
@@ -26,7 +26,7 @@
       gfo = "git fetch origin";
       gcheck = "git checkout";
       gcredential = "git config credential.helper store";
- 
+
       ls = "eza -al --color=always --group-directories-first --icons";
       la = "eza -a --color=always --group-directories-first --icons";
       ll = "eza -l --color=always --group-directories-first --icons";
@@ -46,7 +46,7 @@
       egrep = "egrep --color=auto";
       jctl = "journalctl -p 3 -xb";
     };
-   
+
     functions = {
       __history_previous_command = ''
         switch (commandline -t)
@@ -54,7 +54,7 @@
           commandline -t $history[1]; commandline -f repaint
         case "*"
           commandline -i !
-        end 
+        end
       '';
 
       __history_previous_command_arguments = ''
@@ -66,7 +66,7 @@
           commandline -i "$"
         end
       '';
-      
+
       history = ''
         builtin history --show-time="%F %T "
       '';
@@ -79,7 +79,7 @@
         set count (count $argv | tr -d \n)
         if test "$count" =2; and test -d "$argv[1]"
              set from (echo $argv[1] | trim-right /)
-             set to (echo $argv[2]) 
+             set to (echo $argv[2])
              command cp -r $from $to
         else
             command cp $argv
