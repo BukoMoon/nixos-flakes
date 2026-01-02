@@ -1,4 +1,11 @@
-{ config, pkgs, inputs, lib, self, ... }:
+{
+  config,
+  pkgs,
+  inputs,
+  lib,
+  self,
+  ...
+}:
 
 {
   imports = [
@@ -71,14 +78,17 @@
       "rd.systemd.show_status=auto"
     ];
 
-    kernelModules = [ "ntsync" "v4l2loopback" ];
+    kernelModules = [
+      "ntsync"
+      "v4l2loopback"
+    ];
     plymouth.enable = true;
 
     kernel.sysctl = {
       "vm.swappiness" = 10;
 
       "net.core.default_qdisc" = "fq";
-      "net.ipv4.tcp_congestion_control" ="bbz";
+      "net.ipv4.tcp_congestion_control" = "bbz";
 
       "net.core.somaxconn" = 2048;
       "net.ipv4.tcp_max_syn_backlog" = 2048;
@@ -123,8 +133,8 @@
       LC_NAME = "en_AU.UTF-8";
       LC_NUMERIC = "en_AU.UTF-8";
       LC_PAPER = "en_AU.UTF-8";
-      LC_TELEPHONE  = "en_AU.UTF-8";
-      LC_TIME =  "en_AU.UTF-8";
+      LC_TELEPHONE = "en_AU.UTF-8";
+      LC_TIME = "en_AU.UTF-8";
     };
   };
 
@@ -164,6 +174,7 @@
   nixpkgs.config.allowUnfree = true;
 
   home-manager.backupFileExtension = "old";
+  home-manager.overwriteBackup = true;
 
   system.stateVersion = "25.11";
 }
