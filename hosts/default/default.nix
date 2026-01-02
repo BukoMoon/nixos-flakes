@@ -14,7 +14,6 @@
     #"${self}/modules/stylix.nix"
     "${self}/modules/system/xdg.nix"
     "${self}/modules/system/environment.nix"
-    "${self}/modules/packages.nix"
     "${self}/modules/system/virtualisation.nix"
     "${self}/modules/system/keyring.nix"
     "${self}/modules/system/nvidia.nix"
