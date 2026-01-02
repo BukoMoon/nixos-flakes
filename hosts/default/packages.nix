@@ -29,17 +29,11 @@ with pkgs;
   mpv
   gpu-screen-recorder
   cava
-
-  # Quickshell
-  qt6Packages.qt5compat
-  libsForQt5.qt5.qtgraphicaleffects
-  kdePackages.qtbase
-  kdePackages.qtdeclarative
-  kdePackages.qtstyleplugin-kvantum
-  wallust
+  pciutils
 
   # Fish
   fishPlugins.fzf-fish
   fzf
   eza
+  fastfetch
 ]
