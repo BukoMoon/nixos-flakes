@@ -3,12 +3,12 @@
 {
   programs.fish = {
     enable = true;
-    #interactiveShellInit = ''
-    #  set fish_greeting
-    #
-    #  fastfetch
-    #  starship init fish | source
-    #'';
+    interactiveShellInit = ''
+        set fish_greeting
+
+        fastfetch
+      #  starship init fish | source
+    '';
 
     shellAliases = {
       c = "clear";
