@@ -15,7 +15,7 @@ in
 
   imports = [
     ../../home/niri/default.nix
-    ../../home/noctalia.nix
+    ../../home/noctalia/default.nix
     ../../home/vesktop.nix
     ../../home/zeditor.nix
     ../../home/doom-emacs/doom-emacs.nix
