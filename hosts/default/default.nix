@@ -18,6 +18,7 @@
     "${self}/modules/system/keyring.nix"
     "${self}/modules/system/nvidia.nix"
     "${self}/modules/system/thunar.nix"
+    "${self}/modules/system/filesystems.nix"
     inputs.home-manager.nixosModules.default
   ];
 
