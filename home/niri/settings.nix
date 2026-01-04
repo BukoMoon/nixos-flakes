@@ -6,8 +6,8 @@
     package = pkgs.niri;
     settings = {
       workspaces = {
-        "browser" = {};
-        "vesktop" = {};
+        "browser" = { };
+        "vesktop" = { };
       };
 
       prefer-no-csd = true;
@@ -68,7 +68,10 @@
             refresh = 60.00;
           };
           scale = 1.0;
-          position = { x = 0; y = 0; };
+          position = {
+            x = 0;
+            y = 0;
+          };
         };
       };
 
@@ -89,10 +92,10 @@
         QT_QPA_PLATFORMTHEME_QT6 = "qt6ct";
         XCURSOR_THEME = "Bibata-Modern-Classic";
         XCURSOR_SIZE = "24";
+        __GL_THREADED_OPTIMIZATIONS = "0";
 
         XDG_SESSION_TYPE = "wayland";
         XDG_CURRENT_DESKTOP = "niri";
-        DISPLAY = ":0";
       };
 
       screenshot-path = "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png";
