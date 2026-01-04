@@ -22,7 +22,7 @@
         kcolorscheme = true;
         cava = true;
         kitty = true;
-        niri = true;
+        #niri = true;
         zed = true;
         emacs = true;
         enableUserTemplates = true;
@@ -34,7 +34,7 @@
 
       general = {
         avatarImage = "/home/buko/.face";
-        radiusRatio = 0.2;
+        radiusRatio = 1;
       };
       ui = {
         fontDefault = "CaskaydiaMono Nerd Font Mono";
