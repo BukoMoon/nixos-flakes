@@ -163,6 +163,12 @@
       };
     };
 
+    logind.settings.Login = {
+      HandleLidSwitch = "poweroff";
+      HandleLidSwitchExternalPower = "lock";
+      HandleLidSwitchDocked = "ignore";
+    };
+
     tlp = {
       enable = true;
       settings = {
